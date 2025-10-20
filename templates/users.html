@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h2">Administración de Usuarios</h1>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userModal">
+            <i class="bi bi-person-plus-fill me-2"></i>Añadir Nuevo Usuario
+        </button>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Rol</th>
+                        <th>ID Tarjeta RFID</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fernando André Urrea Gonzalez</td>
+                        <td><span class="badge bg-primary">Administrador</span></td>
+                        <td>F4:B8:5E:8D</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-warning"><i class="bi bi-pencil-fill"></i></button>
+                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash-fill"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Ernesto Noyola Rivera</td>
+                        <td><span class="badge bg-secondary">Operario</span></td>
+                        <td>A1:C3:7F:99</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-warning"><i class="bi bi-pencil-fill"></i></button>
+                            <button class="btn btn-sm btn-outline-danger"><i class="bi bi-trash-fill"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="userModalLabel">Añadir Nuevo Usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="fullName">
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Nombre de Usuario</label>
+            <input type="text" class="form-control" id="username">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <div class="mb-3">
+            <label for="userRole" class="form-label">Rol</label>
+            <select class="form-select" id="userRole">
+                <option value="admin">Administrador</option>
+                <option selected value="operator">Operario</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="rfidTag" class="form-label">ID de Tarjeta RFID</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="rfidTag" placeholder="Pase la tarjeta por el lector...">
+                <button class="btn btn-outline-secondary" type="button">Escanear</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar Usuario</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+<div class="container-fluid">
+    <h1 class="h2 mb-4">Dashboard</h1>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title text-muted">Precisión del Inventario</h5>
+                            <p class="display-4 fw-bold text-success">99.7%</p>
+                            <p class="card-text"><small class="text-muted">Última auditoría: 18-Oct-2025</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-muted mb-3">Estado de Dispositivos</h5>
+                            <div class="d-flex justify-content-around align-items-center">
+                                <div class="text-center">
+                                    <i class="bi bi-check-circle-fill fs-1 text-success"></i>
+                                    <p class="fs-4 fw-bold mb-0">128</p>
+                                    <span class="text-muted">En Línea</span>
+                                </div>
+                                <div class="text-center">
+                                    <i class="bi bi-x-circle-fill fs-1 text-danger"></i>
+                                    <p class="fs-4 fw-bold mb-0">3</p>
+                                    <span class="text-muted">Con Fallos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Alertas Críticas de Stock
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-exclamation-triangle-fill text-warning me-3 fs-4"></i>
+                                <div><strong>Stock Bajo:</strong> Maíz Palomero (SKU-12345) en Rack A-01.
+                                    <small class="d-block text-muted">Quedan 10kg / Mínimo 15kg</small>
+                                </div>
+                            </li>
+                             <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-box-seam text-info me-3 fs-4"></i>
+                                <div><strong>Stock Alto:</strong> Vasos Grandes (SKU-67890) en Rack C-04.
+                                    <small class="d-block text-muted">Hay 2500u / Máximo 2000u</small>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="bi bi-exclamation-triangle-fill text-warning me-3 fs-4"></i>
+                                <div><strong>Stock Bajo:</strong> Nachos (SKU-55443) en Rack B-02.
+                                    <small class="d-block text-muted">Quedan 22kg / Mínimo 25kg</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">Actividad en Tiempo Real</div>
+                <div class="card-body" style="max-height: 450px; overflow-y: auto;">
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-person-fill-check text-primary me-3 fs-4"></i>
+                            <div><strong>Fernando Urrea</strong> retiró -5.2 kg de SKU-55443.
+                                <small class="d-block text-muted">hace 3 minutos</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-person-fill-slash text-secondary me-3 fs-4"></i>
+                            <div><strong>Ajuste no autenticado</strong> de +10 unidades en Rack C-04.
+                                <small class="d-block text-muted">hace 15 minutos</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-person-fill-check text-primary me-3 fs-4"></i>
+                            <div><strong>Ian Corza</strong> añadió +50 kg de SKU-12345.
+                                <small class="d-block text-muted">hace 28 minutos</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-person-fill-check text-primary me-3 fs-4"></i>
+                            <div><strong>Brian Tellez</strong> retiró -1.5 kg de SKU-55443.
+                                <small class="d-block text-muted">hace 1 hora</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

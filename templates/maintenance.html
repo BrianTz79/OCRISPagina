@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <h1 class="h2 mb-4">Mantenimiento y Logs del Sistema</h1>
+    <p class="text-muted">Visor de eventos del sistema para diagnóstico y solución de problemas.</p>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-5">
+                    <input type="text" class="form-control" placeholder="Buscar en logs...">
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select">
+                        <option selected>Filtrar por Nivel...</option>
+                        <option value="info">INFO</option>
+                        <option value="warning">ADVERTENCIA</option>
+                        <option value="error">ERROR</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Timestamp</th>
+                    <th style="width: 10%;">Nivel</th>
+                    <th style="width: 15%;">Módulo</th>
+                    <th>Mensaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-danger">
+                    <td>2025-10-20 13:10:05</td>
+                    <td><span class="badge bg-danger">ERROR</span></td>
+                    <td>Device-B-01</td>
+                    <td>Failed to connect to Wi-Fi after 3 attempts. Entering offline mode.</td>
+                </tr>
+                <tr class="table-warning">
+                    <td>2025-10-20 13:08:41</td>
+                    <td><span class="badge bg-warning text-dark">WARN</span></td>
+                    <td>API-Gateway</td>
+                    <td>Unauthenticated adjustment detected on Rack C-04. Weight change: +10 units.</td>
+                </tr>
+                <tr class="table-info">
+                    <td>2025-10-20 13:05:12</td>
+                    <td><span class="badge bg-info">INFO</span></td>
+                    <td>Auth-Service</td>
+                    <td>User 'faurrea' successfully logged in.</td>
+                </tr>
+                 <tr class="table-info">
+                    <td>2025-10-20 13:02:20</td>
+                    <td><span class="badge bg-info">INFO</span></td>
+                    <td>Device-A-01</td>
+                    <td>Weight transaction received. Scale 3, New Weight: 25.5kg, RFID: F4:B8:5E:8D.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

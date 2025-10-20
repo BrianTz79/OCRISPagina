@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h1 class="h2 mb-4">Generación de Reportes</h1>
+    <p class="text-muted">Seleccione los parámetros para generar un reporte de inventario.</p>
+
+    <div class="card">
+        <div class="card-body">
+            <form class="row g-3 align-items-end">
+                <div class="col-md-4">
+                    <label for="reportType" class="form-label">Tipo de Reporte</label>
+                    <select class="form-select" id="reportType">
+                        <option selected>Elegir...</option>
+                        <option value="1">Trazabilidad por Usuario</option>
+                        <option value="2">Mermas y Ajustes No Autenticados</option>
+                        <option value="3">Rotación de Inventario (ABC)</option>
+                        <option value="4">Cumplimiento de Procesos</option>
+                        <option value="5">Salud del Hardware</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="dateRange" class="form-label">Rango de Fechas</label>
+                    <input type="date" class="form-control" id="dateRange">
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary w-100">Generar Reporte</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-4" id="report-output">
+        <p class="text-center text-muted">El reporte generado aparecerá aquí.</p>
+    </div>
+</div>
