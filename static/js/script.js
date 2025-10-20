@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>`;
 
         try {
-            const response = await fetch(`pages/${page}.html`);
+            const response = await fetch(`${page}.html`); // <-- CAMBIO AQUÍ
             if (!response.ok) {
                 throw new Error(`Page not found: ${page}.html`);
             }
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             mainContent.innerHTML = `
                 <div class="alert alert-danger" role="alert">
                     <h4 class="alert-heading">Error 404</h4>
-                    <p>No se pudo cargar el contenido de la página solicitada. Por favor, verifique que el archivo <strong>pages/${page}.html</strong> exista.</p>
-                </div>`;
+                    <p>No se pudo cargar el contenido de la página solicitada. Por favor, verifique que el archivo <strong>${page}.html</strong> exista.</p> 
+                </div>`; // <-- CAMBIO AQUÍ
         }
     };
 
